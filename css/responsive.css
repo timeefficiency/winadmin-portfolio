@@ -1,1 +1,375 @@
+/* =====================================================
+   WinAdmin Portfolio
+   Responsive Styles
+   Mobile First Enhancements
+===================================================== */
 
+/* ==========================================
+   Large Desktop (1400px and below)
+========================================== */
+
+@media (max-width: 1400px) {
+
+    .container {
+        width: min(92%, 1200px);
+    }
+
+}
+
+
+/* ==========================================
+   Laptop (1200px and below)
+========================================== */
+
+@media (max-width: 1200px) {
+
+    section {
+        padding: 80px 0;
+    }
+
+    .hero-grid {
+        gap: 50px;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+}
+
+
+/* ==========================================
+   Tablet Landscape (1024px)
+========================================== */
+
+@media (max-width: 1024px) {
+
+    /* Hero */
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .hero-image img {
+        max-width: 320px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Cards */
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   Tablet Portrait (768px)
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+
+    .navbar .container {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 70px;
+
+        right: -100%;
+
+        width: 280px;
+
+        height: calc(100vh - 70px);
+
+        background: #0F172A;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding: 30px;
+
+        transition: .35s ease;
+
+        border-left: 1px solid rgba(255,255,255,.08);
+
+        box-shadow: -10px 0 25px rgba(0,0,0,.30);
+
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.08);
+
+    }
+
+    /* Hero */
+
+    .hero {
+
+        padding-top: 120px;
+
+        min-height: auto;
+
+    }
+
+    h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .hero-description {
+
+        font-size: 1rem;
+
+    }
+
+    /* Grid */
+
+    .card-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    /* Project Images */
+
+    .project-card img {
+
+        aspect-ratio: 16/9;
+
+        object-fit: cover;
+
+    }
+
+}
+
+
+/* ==========================================
+   Mobile (576px)
+========================================== */
+
+@media (max-width: 576px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+    section {
+
+        padding: 70px 0;
+
+    }
+
+    h1 {
+
+        font-size: 2.1rem;
+
+    }
+
+    h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+    h3 {
+
+        font-size: 1.15rem;
+
+    }
+
+    p {
+
+        font-size: .95rem;
+
+    }
+
+    /* Buttons */
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+    /* Hero */
+
+    .hero-image img {
+
+        max-width: 260px;
+
+    }
+
+    /* Cards */
+
+    .card,
+    .project-card {
+
+        padding: 24px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Small Mobile (400px)
+========================================== */
+
+@media (max-width: 400px) {
+
+    .logo {
+
+        font-size: 1.4rem;
+
+    }
+
+    h1 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .hero {
+
+        padding-top: 100px;
+
+    }
+
+    .hero-description {
+
+        font-size: .92rem;
+
+    }
+
+}
+
+
+/* ==========================================
+   Large Screens (1600px+)
+========================================== */
+
+@media (min-width: 1600px) {
+
+    .container {
+
+        max-width: 1400px;
+
+    }
+
+}
+
+
+/* ==========================================
+   Reduced Motion Accessibility
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation: none !important;
+
+        transition: none !important;
+
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+
+/* ==========================================
+   Print Styles
+========================================== */
+
+@media print {
+
+    .navbar,
+    .menu-toggle,
+    .hero-buttons,
+    footer {
+
+        display: none;
+
+    }
+
+    body {
+
+        background: white;
+
+        color: black;
+
+    }
+
+    section {
+
+        padding: 20px 0;
+
+    }
+
+}
