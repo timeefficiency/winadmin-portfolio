@@ -1,0 +1,505 @@
+/* ==========================================================
+   HOMELAB PAGE
+   File: assets/css/pages/homelab.css
+   Description: Page-specific styles for homelab.html
+   ========================================================== */
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+.hero-small {
+    padding: 8rem 0 5rem;
+}
+
+.hero-small .hero-description {
+    max-width: 760px;
+    margin: 1.5rem auto 2.5rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 999px;
+    background: rgba(0, 120, 212, .12);
+    color: var(--color-primary);
+    font-size: .875rem;
+    font-weight: 600;
+    letter-spacing: .03em;
+}
+
+/* ==========================================================
+   Shared Section Layout
+   ========================================================== */
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.section-heading h2 {
+    margin-bottom: 1rem;
+}
+
+.section-heading p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   Overview Cards
+   ========================================================== */
+
+.feature-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature-card {
+    background: var(--color-surface);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-primary);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   Dashboard
+   ========================================================== */
+
+.dashboard-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.status-card {
+    position: relative;
+    background: var(--color-surface);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    transition: .3s;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.status-indicator.online {
+    background: #22c55e;
+    box-shadow: 0 0 10px rgba(34,197,94,.5);
+}
+
+/* ==========================================================
+   Hardware
+   ========================================================== */
+
+.hardware-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.hardware-card {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    transition: .3s;
+}
+
+.hardware-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-6px);
+}
+
+.hardware-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hardware-specs {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.hardware-specs li {
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* ==========================================================
+   Virtual Machines
+   ========================================================== */
+
+.vm-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.vm-card {
+    position: relative;
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    transition: .3s;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+}
+
+.vm-status {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.vm-status.online {
+    background: #22c55e;
+}
+
+.vm-role {
+    margin: .75rem 0 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.vm-card ul {
+    padding-left: 1rem;
+}
+
+.vm-card li {
+    margin-bottom: .5rem;
+}
+
+/* ==========================================================
+   SVG Network Diagram
+   ========================================================== */
+
+.diagram-card {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+    overflow-x: auto;
+}
+
+.network-diagram {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================
+   Statistics
+   ========================================================== */
+
+.stats-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+.stat-card {
+    background: var(--color-card);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.stat-card h2 {
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    margin-bottom: .75rem;
+}
+
+/* ==========================================================
+   Storage
+   ========================================================== */
+
+.storage-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+}
+
+.storage-card {
+    background: var(--color-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-border);
+}
+
+.storage-card ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+/* ==========================================================
+   Services
+   ========================================================== */
+
+.services-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-card);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+}
+
+.service-status {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.service-status.online {
+    background: #22c55e;
+}
+
+/* ==========================================================
+   Technology Stack
+   ========================================================== */
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.tech-badge {
+    padding: .75rem 1.25rem;
+    border-radius: 999px;
+    background: rgba(0,120,212,.12);
+    border: 1px solid rgba(0,120,212,.25);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* ==========================================================
+   Projects Table
+   ========================================================== */
+
+.projects-table {
+    overflow-x: auto;
+}
+
+.projects-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+.projects-table th {
+    background: var(--color-card);
+}
+
+/* ==========================================================
+   Roadmap
+   ========================================================== */
+
+.roadmap {
+    display: grid;
+    gap: 1rem;
+    max-width: 700px;
+    margin: auto;
+}
+
+.roadmap-item {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: var(--color-card);
+    border-left: 5px solid var(--color-primary);
+}
+
+.roadmap-item.completed {
+    border-left-color: #22c55e;
+}
+
+/* ==========================================================
+   Gallery
+   ========================================================== */
+
+.gallery-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+}
+
+.gallery-item {
+    background: var(--color-card);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+}
+
+.gallery-item h3 {
+    padding: 1.5rem;
+}
+
+/* ==========================================================
+   FAQ
+   ========================================================== */
+
+.faq-list {
+    max-width: 900px;
+    margin: auto;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+    background: var(--color-card);
+    border-radius: 16px;
+}
+
+.faq-item h3 {
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   CTA
+   ========================================================== */
+
+.cta-section {
+    padding: 6rem 0;
+}
+
+.cta-card {
+    text-align: center;
+    padding: 4rem;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(0,120,212,.18),
+        rgba(36,52,71,.9)
+    );
+    border: 1px solid rgba(0,120,212,.25);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width:992px){
+
+    .hero-small{
+        text-align:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .section{
+        padding:4rem 0;
+    }
+
+    .cta-card{
+        padding:2.5rem;
+    }
+
+    .projects-table{
+        font-size:.9rem;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .dashboard-grid,
+    .hardware-grid,
+    .vm-grid,
+    .storage-grid,
+    .gallery-grid,
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .cta-buttons .btn{
+        width:100%;
+    }
+
+}
+
+/* ==========================================================
+   End of File
+   ========================================================== */
