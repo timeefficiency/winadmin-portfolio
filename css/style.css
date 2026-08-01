@@ -646,4 +646,62 @@ footer p {
 
     animation: fadeUp .8s ease forwards;
 
+    /* CSS FOR ABOUT PAGE  */
+    /* ==========================================
+   PAGE HERO
+========================================== */
+
+.page-hero {
+    padding-top: 140px;
+    text-align: center;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-header p {
+    max-width: 700px;
+}
+
+/* ==========================================
+   PROFILE IMAGE
+========================================== */
+
+.profile-image {
+    max-width: 380px;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    box-shadow: var(--shadow-md);
+    margin: auto;
+}
+
+/* ==========================================
+   BADGES
+========================================== */
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 2rem;
+}
+
+.badge {
+    padding: 10px 18px;
+    background: var(--surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--text);
+    transition: var(--transition-normal);
+}
+
+.badge:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
 }
