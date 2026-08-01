@@ -1,0 +1,370 @@
+/* ==========================================================
+   LAB NOTES PAGE
+   File: assets/css/pages/lab-notes.css
+   ========================================================== */
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+.hero-small {
+    padding: 7rem 0 5rem;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 999px;
+    background: rgba(0,120,212,.12);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 760px;
+    margin: 1.5rem auto 2rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   Featured Article
+   ========================================================== */
+
+.featured-article {
+    background: linear-gradient(
+        135deg,
+        rgba(0,120,212,.12),
+        rgba(36,52,71,.95)
+    );
+    border: 1px solid rgba(0,120,212,.2);
+    border-radius: 20px;
+    padding: 3rem;
+}
+
+.article-category {
+    display: inline-block;
+    padding: .4rem .9rem;
+    border-radius: 999px;
+    background: rgba(0,120,212,.15);
+    color: var(--color-primary);
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+    color: var(--color-text-muted);
+    font-size: .9rem;
+}
+
+/* ==========================================================
+   Search
+   ========================================================== */
+
+.search-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-card);
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(0,120,212,.15);
+}
+
+/* ==========================================================
+   Category Filters
+   ========================================================== */
+
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+}
+
+.filter-btn {
+    padding: .7rem 1.2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-card);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+
+/* ==========================================================
+   Articles
+   ========================================================== */
+
+.articles-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: .3s;
+}
+
+.article-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-primary);
+}
+
+.article-card h3 {
+    margin: 1rem 0;
+}
+
+.article-info {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: var(--color-text-muted);
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    margin-top: auto;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   Popular Topics
+   ========================================================== */
+
+.popular-topics-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.topic-card {
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    transition: .3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================================
+   Learning Paths
+   ========================================================== */
+
+.learning-path-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+}
+
+.learning-card {
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+
+.learning-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.learning-card ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.learning-card li {
+    margin-bottom: .75rem;
+}
+
+/* ==========================================================
+   Downloads
+   ========================================================== */
+
+.downloads-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+}
+
+.download-card {
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.download-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   Resources
+   ========================================================== */
+
+.resources-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+}
+
+.resource-card {
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+
+/* ==========================================================
+   Toolkit
+   ========================================================== */
+
+.toolkit-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+}
+
+.tool-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    font-weight: 600;
+}
+
+/* ==========================================================
+   Documentation Standards
+   ========================================================== */
+
+.standards-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+}
+
+.standards-card ol {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.standards-card li {
+    margin-bottom: .75rem;
+}
+
+/* ==========================================================
+   Quick Links
+   ========================================================== */
+
+.quick-links-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.quick-link-card {
+    display: block;
+    padding: 2rem;
+    border-radius: 16px;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    color: inherit;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.quick-link-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-primary);
+}
+
+.quick-link-card h3 {
+    margin-bottom: .75rem;
+}
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    .featured-article {
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .article-meta {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .category-filter {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .articles-grid,
+    .downloads-grid,
+    .resources-grid,
+    .learning-path-grid,
+    .popular-topics-grid,
+    .quick-links-grid,
+    .toolkit-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

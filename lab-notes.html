@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ======================================================
+         WinAdmin Portfolio
+         Lab Notes
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Lab Notes | Windows System Administrator Portfolio
+    </title>
+
+    <meta
+        name="description"
+        content="Technical documentation covering Windows Server, Active Directory, Microsoft 365, PowerShell, Hyper-V, networking, storage and enterprise infrastructure.">
+
+    <meta
+        name="keywords"
+        content="Windows Server, Active Directory, PowerShell, Microsoft 365, Hyper-V, Lab Notes, Windows Administrator">
+
+    <meta name="author" content="Your Name">
+
+    <link rel="stylesheet"
+          href="assets/css/style.css">
+
+    <link rel="stylesheet"
+          href="assets/css/responsive.css">
+
+    <link rel="stylesheet"
+          href="assets/css/pages/lab-notes.css">
+
+</head>
+
+<body>
+
+<!-- ======================================================
+     Header
+======================================================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+
+            WinAdmin<span>Portfolio</span>
+
+        </a>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li><a href="projects.html">Projects</a></li>
+
+                <li><a href="homelab.html">Homelab</a></li>
+
+                <li><a class="active"
+                       href="lab-notes.html">
+
+                    Lab Notes
+
+                </a></li>
+
+                <li><a href="technologies.html">
+                    Technologies
+                </a></li>
+
+                <li><a href="certifications.html">
+                    Certifications
+                </a></li>
+
+                <li><a href="contact.html">
+                    Contact
+                </a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ======================================================
+     Hero
+======================================================= -->
+
+<section class="hero hero-small">
+
+    <div class="container">
+
+        <span class="hero-badge">
+
+            Knowledge Base
+
+        </span>
+
+        <h1>
+
+            Windows Infrastructure Lab Notes
+
+        </h1>
+
+        <p class="hero-description">
+
+            A growing collection of technical documentation,
+            implementation guides,
+            troubleshooting articles,
+            PowerShell scripts,
+            best practices,
+            and enterprise infrastructure walkthroughs.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#articles"
+               class="btn btn-primary">
+
+                Browse Articles
+
+            </a>
+
+            <a href="projects.html"
+               class="btn btn-outline">
+
+                View Projects
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Featured Article
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="featured-article">
+
+            <div class="featured-content">
+
+                <span class="article-category">
+
+                    Active Directory
+
+                </span>
+
+                <h2>
+
+                    Deploying Active Directory Domain Services
+
+                </h2>
+
+                <div class="article-meta">
+
+                    <span>🟢 Beginner</span>
+
+                    <span>15 min read</span>
+
+                    <span>Windows Server 2022</span>
+
+                </div>
+
+                <p>
+
+                    Learn how to install and configure
+                    Active Directory Domain Services,
+                    promote a server to a Domain Controller,
+                    configure DNS,
+                    and validate a healthy enterprise deployment.
+
+                </p>
+
+                <a href="lab-notes/active-directory/install-ad-ds.html"
+                   class="btn btn-primary">
+
+                    Read Article
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Search
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Search
+
+            </span>
+
+            <h2>
+
+                Find an Article
+
+            </h2>
+
+        </div>
+
+        <div class="search-container">
+
+            <input
+
+                id="articleSearch"
+
+                type="search"
+
+                placeholder="Search Windows Server, Active Directory, PowerShell..."
+
+                autocomplete="off">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Category Filters
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Categories
+
+            </span>
+
+            <h2>
+
+                Browse by Technology
+
+            </h2>
+
+        </div>
+
+        <div class="category-filter">
+
+            <button class="filter-btn active"
+                    data-filter="all">
+
+                All
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="windows">
+
+                Windows Server
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="ad">
+
+                Active Directory
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="powershell">
+
+                PowerShell
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="m365">
+
+                Microsoft 365
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="hyperv">
+
+                Hyper-V
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="networking">
+
+                Networking
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="azure">
+
+                Azure
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="security">
+
+                Security
+
+            </button>
+
+            <button class="filter-btn"
+                    data-filter="storage">
+
+                Storage
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Latest Articles
+======================================================= -->
+
+<section
+id="articles"
+class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Latest Articles
+
+            </span>
+
+            <h2>
+
+                Recent Technical Documentation
+
+            </h2>
+
+            <p>
+
+                Practical implementation guides,
+                troubleshooting documentation,
+                automation tutorials,
+                and Windows administration walkthroughs.
+
+            </p>
+
+        </div>
+
+        <div class="articles-grid">
+
+        <!-- ======================================================
+         second generated code added
+======================================================= -->
+
+        <!-- ======================================================
+             Article Cards
+        ======================================================= -->
+
+        <article class="article-card"
+                 data-category="ad">
+
+            <span class="article-tag">
+                Active Directory
+            </span>
+
+            <h3>
+                Installing Active Directory Domain Services
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+                <span>15 min read</span>
+
+            </div>
+
+            <p>
+
+                Install Active Directory Domain Services,
+                configure DNS, promote a Domain Controller,
+                and validate a healthy deployment.
+
+            </p>
+
+            <a href="lab-notes/active-directory/install-ad-ds.html"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="powershell">
+
+            <span class="article-tag">
+
+                PowerShell
+
+            </span>
+
+            <h3>
+
+                Creating Active Directory Users with PowerShell
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟡 Intermediate</span>
+                <span>12 min read</span>
+
+            </div>
+
+            <p>
+
+                Automate user provisioning using
+                New-ADUser,
+                CSV imports,
+                and reusable PowerShell functions.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="windows">
+
+            <span class="article-tag">
+
+                Windows Server
+
+            </span>
+
+            <h3>
+
+                Configuring DNS on Windows Server
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+                <span>10 min read</span>
+
+            </div>
+
+            <p>
+
+                Install, configure,
+                and validate DNS zones,
+                forwarders,
+                and Active Directory integration.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="hyperv">
+
+            <span class="article-tag">
+
+                Hyper-V
+
+            </span>
+
+            <h3>
+
+                Hyper-V Virtual Switch Configuration
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟡 Intermediate</span>
+
+                <span>14 min read</span>
+
+            </div>
+
+            <p>
+
+                Configure External,
+                Internal,
+                and Private Virtual Switches
+                for enterprise virtualization.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="m365">
+
+            <span class="article-tag">
+
+                Microsoft 365
+
+            </span>
+
+            <h3>
+
+                Managing Microsoft 365 Users
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+
+                <span>18 min read</span>
+
+            </div>
+
+            <p>
+
+                Create,
+                license,
+                and manage Microsoft 365 users
+                using the Admin Center.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="storage">
+
+            <span class="article-tag">
+
+                Storage
+
+            </span>
+
+            <h3>
+
+                Creating Shared Folders on Synology DSM
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+
+                <span>9 min read</span>
+
+            </div>
+
+            <p>
+
+                Configure secure shared folders,
+                permissions,
+                quotas,
+                and SMB access.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="windows">
+
+            <span class="article-tag">
+
+                Windows Server
+
+            </span>
+
+            <h3>
+
+                Installing Windows Admin Center
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+
+                <span>8 min read</span>
+
+            </div>
+
+            <p>
+
+                Install Windows Admin Center
+                for centralized infrastructure management.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="ad">
+
+            <span class="article-tag">
+
+                Active Directory
+
+            </span>
+
+            <h3>
+
+                Group Policy Best Practices
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟡 Intermediate</span>
+
+                <span>20 min read</span>
+
+            </div>
+
+            <p>
+
+                Organize,
+                document,
+                and secure enterprise Group Policy Objects.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="networking">
+
+            <span class="article-tag">
+
+                Networking
+
+            </span>
+
+            <h3>
+
+                Understanding VLANs for Homelabs
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟡 Intermediate</span>
+
+                <span>16 min read</span>
+
+            </div>
+
+            <p>
+
+                Segment your homelab network
+                using VLANs,
+                managed switches,
+                and routing.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="azure">
+
+            <span class="article-tag">
+
+                Azure
+
+            </span>
+
+            <h3>
+
+                Introduction to Microsoft Entra ID
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟢 Beginner</span>
+
+                <span>17 min read</span>
+
+            </div>
+
+            <p>
+
+                Understand identities,
+                authentication,
+                synchronization,
+                and cloud administration.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="security">
+
+            <span class="article-tag">
+
+                Security
+
+            </span>
+
+            <h3>
+
+                Windows Server Security Baseline
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🔴 Advanced</span>
+
+                <span>25 min read</span>
+
+            </div>
+
+            <p>
+
+                Apply Microsoft's recommended
+                hardening guidance
+                for Windows Server deployments.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+        <!-- =============================================== -->
+
+        <article class="article-card"
+                 data-category="powershell">
+
+            <span class="article-tag">
+
+                Automation
+
+            </span>
+
+            <h3>
+
+                PowerShell Health Check Script
+
+            </h3>
+
+            <div class="article-info">
+
+                <span>🟡 Intermediate</span>
+
+                <span>13 min read</span>
+
+            </div>
+
+            <p>
+
+                Create reusable scripts that collect
+                server health,
+                disk usage,
+                and event log information.
+
+            </p>
+
+            <a href="#"
+               class="read-more">
+
+                Read Article →
+
+            </a>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+     Popular Topics
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Popular Topics
+
+            </span>
+
+            <h2>
+
+                Frequently Explored Technologies
+
+            </h2>
+
+        </div>
+
+        <div class="popular-topics-grid">
+
+            <div class="topic-card">
+                <h3>🏢 Active Directory</h3>
+                <p>User management, OU design, GPO, DNS integration, and domain services.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>⚡ PowerShell</h3>
+                <p>Automation, scripting, reporting, bulk administration, and reusable functions.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>🖥 Hyper-V</h3>
+                <p>Virtual machines, virtual networking, checkpoints, and resource management.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>☁ Microsoft 365</h3>
+                <p>Licensing, user administration, Exchange Online, and Microsoft Entra ID.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>🌐 Networking</h3>
+                <p>DNS, DHCP, VLANs, routing, switching, and infrastructure connectivity.</p>
+            </div>
+
+            <div class="topic-card">
+                <h3>💾 Storage & Backup</h3>
+                <p>Synology NAS, Windows Server Backup, snapshots, and recovery planning.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+         second generated code added
+======================================================= -->
+
+<!-- ======================================================
+     Learning Paths
+======================================================= -->
+
+<section class="section" id="learning-paths">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Learning Paths
+
+            </span>
+
+            <h2>
+
+                Structured Learning Roadmaps
+
+            </h2>
+
+            <p>
+
+                Follow curated learning paths designed to build practical
+                enterprise administration skills. Each path combines
+                articles, projects, and hands-on lab exercises.
+
+            </p>
+
+        </div>
+
+        <div class="learning-path-grid">
+
+            <!-- Windows Server -->
+
+            <article class="learning-card">
+
+                <div class="learning-icon">
+                    🖥️
+                </div>
+
+                <h3>
+
+                    Windows Server Administration
+
+                </h3>
+
+                <ul>
+
+                    <li>✔ Windows Server Installation</li>
+
+                    <li>✔ Server Roles & Features</li>
+
+                    <li>✔ Active Directory</li>
+
+                    <li>✔ DNS Configuration</li>
+
+                    <li>✔ DHCP Configuration</li>
+
+                    <li>✔ File Services</li>
+
+                    <li>✔ Group Policy</li>
+
+                    <li>✔ Windows Admin Center</li>
+
+                </ul>
+
+            </article>
+
+            <!-- PowerShell -->
+
+            <article class="learning-card">
+
+                <div class="learning-icon">
+                    ⚡
+                </div>
+
+                <h3>
+
+                    PowerShell Automation
+
+                </h3>
+
+                <ul>
+
+                    <li>✔ Variables & Operators</li>
+
+                    <li>✔ Loops</li>
+
+                    <li>✔ Functions</li>
+
+                    <li>✔ Modules</li>
+
+                    <li>✔ Error Handling</li>
+
+                    <li>✔ Active Directory Automation</li>
+
+                    <li>✔ Reporting Scripts</li>
+
+                    <li>✔ Scheduled Tasks</li>
+
+                </ul>
+
+            </article>
+
+            <!-- Microsoft 365 -->
+
+            <article class="learning-card">
+
+                <div class="learning-icon">
+                    ☁️
+                </div>
+
+                <h3>
+
+                    Microsoft 365 Administration
+
+                </h3>
+
+                <ul>
+
+                    <li>✔ Microsoft 365 Fundamentals</li>
+
+                    <li>✔ Microsoft Entra ID</li>
+
+                    <li>✔ Exchange Online</li>
+
+                    <li>✔ User Management</li>
+
+                    <li>✔ Licensing</li>
+
+                    <li>✔ Security Policies</li>
+
+                    <li>✔ Intune Basics</li>
+
+                </ul>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Downloads
+======================================================= -->
+
+<section class="section section-dark" id="downloads">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Downloads
+
+            </span>
+
+            <h2>
+
+                Scripts & Documentation
+
+            </h2>
+
+            <p>
+
+                Download templates, checklists, PowerShell scripts,
+                and implementation guides used throughout my projects.
+
+            </p>
+
+        </div>
+
+        <div class="downloads-grid">
+
+            <article class="download-card">
+
+                <div class="download-icon">📄</div>
+
+                <h3>
+
+                    Windows Server Build Checklist
+
+                </h3>
+
+                <p>
+
+                    A step-by-step checklist for deploying
+                    Windows Server in a lab or production environment.
+
+                </p>
+
+                <a href="#"
+                   class="btn btn-outline">
+
+                    Download
+
+                </a>
+
+            </article>
+
+            <article class="download-card">
+
+                <div class="download-icon">⚡</div>
+
+                <h3>
+
+                    PowerShell User Creation Script
+
+                </h3>
+
+                <p>
+
+                    Create Active Directory users
+                    from CSV files using reusable functions.
+
+                </p>
+
+                <a href="#"
+                   class="btn btn-outline">
+
+                    Download
+
+                </a>
+
+            </article>
+
+            <article class="download-card">
+
+                <div class="download-icon">🛡️</div>
+
+                <h3>
+
+                    GPO Documentation Template
+
+                </h3>
+
+                <p>
+
+                    A standardized template for documenting
+                    Group Policy Objects and security settings.
+
+                </p>
+
+                <a href="#"
+                   class="btn btn-outline">
+
+                    Download
+
+                </a>
+
+            </article>
+
+            <article class="download-card">
+
+                <div class="download-icon">🗺️</div>
+
+                <h3>
+
+                    Network Diagram Template
+
+                </h3>
+
+                <p>
+
+                    A Visio-style network documentation template
+                    for Windows environments.
+
+                </p>
+
+                <a href="#"
+                   class="btn btn-outline">
+
+                    Download
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Recommended Resources
+======================================================= -->
+
+<section class="section" id="resources">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Resources
+
+            </span>
+
+            <h2>
+
+                Recommended Learning Resources
+
+            </h2>
+
+            <p>
+
+                Trusted documentation and platforms that I regularly use
+                to learn, validate implementations, and stay current with
+                Microsoft technologies.
+
+            </p>
+
+        </div>
+
+        <div class="resources-grid">
+
+            <article class="resource-card">
+
+                <h3>
+
+                    Microsoft Learn
+
+                </h3>
+
+                <p>
+
+                    Official Microsoft documentation,
+                    learning paths,
+                    and hands-on exercises.
+
+                </p>
+
+            </article>
+
+            <article class="resource-card">
+
+                <h3>
+
+                    Windows Server Documentation
+
+                </h3>
+
+                <p>
+
+                    Deployment guidance,
+                    best practices,
+                    and administration references.
+
+                </p>
+
+            </article>
+
+            <article class="resource-card">
+
+                <h3>
+
+                    PowerShell Documentation
+
+                </h3>
+
+                <p>
+
+                    Cmdlets,
+                    scripting techniques,
+                    modules,
+                    and automation guidance.
+
+                </p>
+
+            </article>
+
+            <article class="resource-card">
+
+                <h3>
+
+                    Microsoft 365 Documentation
+
+                </h3>
+
+                <p>
+
+                    Administration,
+                    identity,
+                    licensing,
+                    and cloud services.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Administration Toolkit
+======================================================= -->
+
+<section class="section section-dark" id="toolkit">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Toolkit
+
+            </span>
+
+            <h2>
+
+                Administration Tools
+
+            </h2>
+
+        </div>
+
+        <div class="toolkit-grid">
+
+            <div class="tool-card">
+                Windows Terminal
+            </div>
+
+            <div class="tool-card">
+                Visual Studio Code
+            </div>
+
+            <div class="tool-card">
+                Windows Admin Center
+            </div>
+
+            <div class="tool-card">
+                Hyper-V Manager
+            </div>
+
+            <div class="tool-card">
+                Active Directory Users & Computers
+            </div>
+
+            <div class="tool-card">
+                Group Policy Management
+            </div>
+
+            <div class="tool-card">
+                PowerShell 7
+            </div>
+
+            <div class="tool-card">
+                Git & GitHub
+            </div>
+
+            <div class="tool-card">
+                Synology DSM
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Documentation Standards
+======================================================= -->
+
+<section class="section" id="standards">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Standards
+
+            </span>
+
+            <h2>
+
+                Documentation Philosophy
+
+            </h2>
+
+        </div>
+
+        <div class="standards-card">
+
+            <p>
+
+                Every article in this knowledge base follows a consistent
+                enterprise documentation structure to ensure clarity,
+                repeatability, and maintainability.
+
+            </p>
+
+            <ol>
+
+                <li>Overview</li>
+
+                <li>Objectives</li>
+
+                <li>Prerequisites</li>
+
+                <li>Implementation Steps</li>
+
+                <li>PowerShell Commands</li>
+
+                <li>Validation</li>
+
+                <li>Troubleshooting</li>
+
+                <li>Best Practices</li>
+
+                <li>References</li>
+
+                <li>Related Articles & Projects</li>
+
+            </ol>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+         Third and last generated code added
+======================================================= -->
+
+<!-- ======================================================
+     Stay Connected
+======================================================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <span class="section-tag">
+
+                Keep Learning
+
+            </span>
+
+            <h2>
+
+                Continue Exploring My Technical Documentation
+
+            </h2>
+
+            <p>
+
+                This knowledge base grows alongside my homelab and
+                professional experience. New implementation guides,
+                PowerShell automation examples, troubleshooting articles,
+                and infrastructure projects are added regularly.
+
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="projects.html"
+                   class="btn btn-primary">
+
+                    Explore Projects
+
+                </a>
+
+                <a href="contact.html"
+                   class="btn btn-outline">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Quick Navigation
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Quick Access
+
+            </span>
+
+            <h2>
+
+                Explore More
+
+            </h2>
+
+        </div>
+
+        <div class="quick-links-grid">
+
+            <a href="about.html" class="quick-link-card">
+
+                <h3>About Me</h3>
+
+                <p>
+                    Learn about my experience,
+                    certifications and technical journey.
+                </p>
+
+            </a>
+
+            <a href="projects.html" class="quick-link-card">
+
+                <h3>Projects</h3>
+
+                <p>
+                    Browse enterprise Windows infrastructure
+                    and automation projects.
+                </p>
+
+            </a>
+
+            <a href="homelab.html" class="quick-link-card">
+
+                <h3>Homelab</h3>
+
+                <p>
+                    Explore my virtualization platform,
+                    servers and network architecture.
+                </p>
+
+            </a>
+
+            <a href="contact.html" class="quick-link-card">
+
+                <h3>Contact</h3>
+
+                <p>
+                    Get in touch regarding Windows
+                    administration, collaboration or opportunities.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Footer
+======================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Brand -->
+
+            <div class="footer-column">
+
+                <h3>
+
+                    WinAdmin Portfolio
+
+                </h3>
+
+                <p>
+
+                    Windows System Administrator &
+                    Homelab Enthusiast documenting
+                    enterprise infrastructure,
+                    Microsoft technologies,
+                    PowerShell automation,
+                    and continuous learning.
+
+                </p>
+
+            </div>
+
+            <!-- Navigation -->
+
+            <div class="footer-column">
+
+                <h4>
+
+                    Navigation
+
+                </h4>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="projects.html">Projects</a></li>
+
+                    <li><a href="homelab.html">Homelab</a></li>
+
+                    <li><a href="lab-notes.html">Lab Notes</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Technologies -->
+
+            <div class="footer-column">
+
+                <h4>
+
+                    Technologies
+
+                </h4>
+
+                <ul>
+
+                    <li>Windows Server</li>
+
+                    <li>Microsoft 365</li>
+
+                    <li>Active Directory</li>
+
+                    <li>Hyper-V</li>
+
+                    <li>PowerShell</li>
+
+                    <li>Azure</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Resources -->
+
+            <div class="footer-column">
+
+                <h4>
+
+                    Resources
+
+                </h4>
+
+                <ul>
+
+                    <li><a href="certifications.html">Certifications</a></li>
+
+                    <li><a href="resume.html">Resume</a></li>
+
+                    <li><a href="technologies.html">Technologies</a></li>
+
+                    <li><a href="projects.html">Project Archive</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Your Name.
+                Built with HTML5, CSS3 and JavaScript.
+                Hosted with GitHub Pages.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- ======================================================
+     JavaScript
+======================================================= -->
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/lab-notes.js"></script>
+
+</body>
+
+</html>
