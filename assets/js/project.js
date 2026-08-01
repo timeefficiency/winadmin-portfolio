@@ -1,160 +1,37 @@
-/* ==========================================================
-   HOMELAB PAGE
-   File: assets/js/homelab.js
-   Description: Interactive functionality for homelab.html
-   ========================================================== */
-
-"use strict";
-
-/* ==========================================================
-   DOM Ready
-========================================================== */
+/**
+ * ==========================================================
+ * PROJECT PAGE
+ * Shared JavaScript for all project pages
+ * ==========================================================
+ */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initializeCounters();
-    initializeRevealAnimations();
-    initializeSmoothScrolling();
-    initializeStatusPulse();
-    initializeGalleryEffects();
-    initializeRoadmapEffects();
+    initSmoothScroll();
+    initRevealAnimations();
+    initBackToTop();
+    initReadingProgress();
+    initCodeCopyButtons();
+    initActiveSections();
+    initGalleryLightbox();
 
 });
-
-/* ==========================================================
-   Animated Statistics
-========================================================== */
-
-function initializeCounters() {
-
-    const counters = document.querySelectorAll(".stat-card h2");
-
-    if (!counters.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            animateCounter(entry.target);
-
-            observer.unobserve(entry.target);
-
-        });
-
-    }, {
-        threshold: 0.5
-    });
-
-    counters.forEach(counter => observer.observe(counter));
-
-}
-
-function animateCounter(element) {
-
-    const text = element.textContent;
-
-    const target = parseInt(text.replace(/\D/g, ""), 10);
-
-    if (isNaN(target)) return;
-
-    const suffix = text.replace(/[0-9]/g, "");
-
-    let current = 0;
-
-    const duration = 1800;
-
-    const increment = target / (duration / 16);
-
-    const update = () => {
-
-        current += increment;
-
-        if (current >= target) {
-
-            element.textContent = target + suffix;
-
-            return;
-
-        }
-
-        element.textContent = Math.floor(current) + suffix;
-
-        requestAnimationFrame(update);
-
-    };
-
-    update();
-
-}
-
-/* ==========================================================
-   Reveal Animations
-========================================================== */
-
-function initializeRevealAnimations() {
-
-    const elements = document.querySelectorAll(
-
-        ".feature-card," +
-        ".status-card," +
-        ".hardware-card," +
-        ".vm-card," +
-        ".storage-card," +
-        ".service-card," +
-        ".gallery-item," +
-        ".faq-item"
-
-    );
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-            }
-
-        });
-
-    }, {
-
-        threshold: 0.15
-
-    });
-
-    elements.forEach(item => {
-
-        item.classList.add("fade-up");
-
-        observer.observe(item);
-
-    });
-
-}
 
 /* ==========================================================
    Smooth Scrolling
 ========================================================== */
 
-function initializeSmoothScrolling() {
+function initSmoothScroll() {
 
     document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-        link.addEventListener("click", event => {
+        link.addEventListener("click", function (e) {
 
-            const target = document.querySelector(
-
-                link.getAttribute("href")
-
-            );
+            const target = document.querySelector(this.getAttribute("href"));
 
             if (!target) return;
 
-            event.preventDefault();
+            e.preventDefault();
 
             target.scrollIntoView({
 
@@ -170,138 +47,327 @@ function initializeSmoothScrolling() {
 }
 
 /* ==========================================================
-   Status Pulse
+   Reveal Animation
 ========================================================== */
 
-function initializeStatusPulse() {
+function initRevealAnimations() {
 
-    const indicators = document.querySelectorAll(
+    const items = document.querySelectorAll(
 
-        ".status-indicator, .service-status, .vm-status"
+        ".section, .timeline-item, .highlight-card, .tech-card, .spec-card, .gallery-card"
 
     );
 
-    indicators.forEach(indicator => {
+    const observer = new IntersectionObserver(
 
-        setInterval(() => {
+        entries => {
 
-            indicator.classList.toggle("pulse");
+            entries.forEach(entry => {
 
-        }, 2500);
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+
+        {
+
+            threshold: 0.15
+
+        }
+
+    );
+
+    items.forEach(item => observer.observe(item));
+
+}
+
+/* ==========================================================
+   Reading Progress Bar
+========================================================== */
+
+function initReadingProgress() {
+
+    const progress = document.createElement("div");
+
+    progress.id = "reading-progress";
+
+    document.body.appendChild(progress);
+
+    window.addEventListener("scroll", () => {
+
+        const scrollTop = document.documentElement.scrollTop;
+
+        const height =
+
+            document.documentElement.scrollHeight -
+
+            document.documentElement.clientHeight;
+
+        const width = (scrollTop / height) * 100;
+
+        progress.style.width = width + "%";
 
     });
 
 }
 
 /* ==========================================================
-   Gallery Hover
+   Back To Top Button
 ========================================================== */
 
-function initializeGalleryEffects() {
+function initBackToTop() {
 
-    const images = document.querySelectorAll(".gallery-item img");
+    const button = document.createElement("button");
+
+    button.id = "back-to-top";
+
+    button.innerHTML = "↑";
+
+    document.body.appendChild(button);
+
+    window.addEventListener("scroll", () => {
+
+        button.classList.toggle(
+
+            "show",
+
+            window.scrollY > 500
+
+        );
+
+    });
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
+   Copy Code Buttons
+========================================================== */
+
+function initCodeCopyButtons() {
+
+    document.querySelectorAll("pre").forEach(pre => {
+
+        const button = document.createElement("button");
+
+        button.className = "copy-button";
+
+        button.textContent = "Copy";
+
+        pre.appendChild(button);
+
+        button.addEventListener("click", async () => {
+
+            const code = pre.querySelector("code");
+
+            if (!code) return;
+
+            try {
+
+                await navigator.clipboard.writeText(
+
+                    code.innerText
+
+                );
+
+                button.textContent = "Copied!";
+
+                setTimeout(() => {
+
+                    button.textContent = "Copy";
+
+                }, 2000);
+
+            }
+
+            catch {
+
+                button.textContent = "Failed";
+
+            }
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
+   Active Section Highlight
+========================================================== */
+
+function initActiveSections() {
+
+    const sections = document.querySelectorAll("section[id]");
+
+    const navLinks = document.querySelectorAll(
+
+        '.article-sidebar a'
+
+    );
+
+    if (!sections.length || !navLinks.length) return;
+
+    const observer = new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) return;
+
+                navLinks.forEach(link => {
+
+                    link.classList.remove("active");
+
+                    if (
+
+                        link.getAttribute("href") ===
+
+                        "#" + entry.target.id
+
+                    ) {
+
+                        link.classList.add("active");
+
+                    }
+
+                });
+
+            });
+
+        },
+
+        {
+
+            rootMargin: "-30% 0px -60% 0px"
+
+        }
+
+    );
+
+    sections.forEach(section => observer.observe(section));
+
+}
+
+/* ==========================================================
+   Gallery Lightbox
+========================================================== */
+
+function initGalleryLightbox() {
+
+    const images = document.querySelectorAll(
+
+        ".gallery-card img"
+
+    );
+
+    if (!images.length) return;
+
+    const overlay = document.createElement("div");
+
+    overlay.id = "lightbox";
+
+    overlay.innerHTML =
+
+        '<span class="close">&times;</span><img>';
+
+    document.body.appendChild(overlay);
+
+    const lightboxImage = overlay.querySelector("img");
+
+    const close = overlay.querySelector(".close");
 
     images.forEach(image => {
 
-        image.addEventListener("mouseenter", () => {
+        image.addEventListener("click", () => {
 
-            image.style.transform = "scale(1.05)";
+            lightboxImage.src = image.src;
 
-        });
+            lightboxImage.alt = image.alt;
 
-        image.addEventListener("mouseleave", () => {
-
-            image.style.transform = "";
+            overlay.classList.add("show");
 
         });
+
+    });
+
+    close.addEventListener("click", () => {
+
+        overlay.classList.remove("show");
+
+    });
+
+    overlay.addEventListener("click", e => {
+
+        if (e.target === overlay) {
+
+            overlay.classList.remove("show");
+
+        }
 
     });
 
 }
 
 /* ==========================================================
-   Roadmap Animation
+   Keyboard Shortcuts
 ========================================================== */
 
-function initializeRoadmapEffects() {
+document.addEventListener("keydown", event => {
 
-    const roadmapItems = document.querySelectorAll(".roadmap-item");
+    if (event.key === "Home") {
 
-    roadmapItems.forEach((item, index) => {
+        window.scrollTo({
 
-        item.style.transitionDelay = `${index * 100}ms`;
+            top: 0,
 
-    });
+            behavior: "smooth"
 
-}
+        });
+
+    }
+
+});
 
 /* ==========================================================
-   Future Integrations
+   Reading Time
 ========================================================== */
 
-/*
-|--------------------------------------------------------------------------
-| Planned Enhancements
-|--------------------------------------------------------------------------
-|
-| Future versions of the portfolio can load live infrastructure
-| information generated from PowerShell or monitoring systems.
-|
-| Example:
-|
-| fetch("assets/data/homelab-status.json")
-|     .then(response => response.json())
-|     .then(data => updateDashboard(data));
-|
-|--------------------------------------------------------------------------
-*/
+(function () {
 
-/* ==========================================================
-   Dashboard Update Example
-========================================================== */
+    const article = document.querySelector("main");
 
-function updateDashboard(data) {
+    if (!article) return;
 
-    if (!data) return;
+    const words = article.innerText.trim().split(/\s+/).length;
 
-    console.log("Dashboard data loaded:", data);
+    const minutes = Math.max(1, Math.ceil(words / 200));
 
-}
+    const target = document.querySelector(".article-meta");
 
-/* ==========================================================
-   VM Update Example
-========================================================== */
+    if (!target) return;
 
-function updateVirtualMachines(vms) {
+    const span = document.createElement("span");
 
-    if (!vms) return;
+    span.textContent = `📖 ${minutes} min read`;
 
-    console.log("Virtual machines:", vms);
+    target.appendChild(span);
 
-}
-
-/* ==========================================================
-   Backup Status Example
-========================================================== */
-
-function updateBackupStatus(status) {
-
-    if (!status) return;
-
-    console.log("Backup status:", status);
-
-}
-
-/* ==========================================================
-   Homelab Health Score (Future)
-========================================================== */
-
-function calculateHealthScore() {
-
-    return 100;
-
-}
-
-/* ==========================================================
-   End of File
-========================================================== */
+})();
