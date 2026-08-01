@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ======================================================
+         Active Directory Lab Project
+         Windows System Administrator Portfolio
+    ======================================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        Active Directory Lab | Windows System Administrator Portfolio
+
+    </title>
+
+    <meta name="description"
+          content="Enterprise Active Directory homelab built using Windows Server 2022, Hyper-V, DNS, DHCP, Group Policy, and PowerShell automation.">
+
+    <meta name="keywords"
+          content="Active Directory, Windows Server, Hyper-V, PowerShell, DNS, DHCP, Windows Administrator">
+
+    <meta name="author"
+          content="Your Name">
+
+    <link rel="stylesheet"
+          href="../assets/css/style.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/responsive.css">
+
+    <link rel="stylesheet"
+          href="../assets/css/pages/project.css">
+
+</head>
+
+<body>
+
+<!-- ======================================================
+     Header
+======================================================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="../index.html"
+           class="logo">
+
+            WinAdmin<span>Portfolio</span>
+
+        </a>
+
+        <nav class="navbar">
+
+            <ul>
+
+                <li><a href="../index.html">Home</a></li>
+
+                <li><a href="../about.html">About</a></li>
+
+                <li><a href="../projects.html"
+                       class="active">
+
+                    Projects
+
+                </a></li>
+
+                <li><a href="../homelab.html">Homelab</a></li>
+
+                <li><a href="../lab-notes.html">Lab Notes</a></li>
+
+                <li><a href="../contact.html">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ======================================================
+     Hero
+======================================================= -->
+
+<section class="hero hero-small">
+
+    <div class="container">
+
+        <span class="hero-badge">
+
+            Enterprise Infrastructure Project
+
+        </span>
+
+        <h1>
+
+            Active Directory Domain Services Lab
+
+        </h1>
+
+        <p class="hero-description">
+
+            A production-style Windows Server 2022 Active Directory
+            environment built in Hyper-V to demonstrate enterprise
+            infrastructure deployment, identity management,
+            networking, Group Policy administration, and
+            PowerShell automation.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#overview"
+               class="btn btn-primary">
+
+                View Project
+
+            </a>
+
+            <a href="../lab-notes/active-directory/install-ad-ds.html"
+               class="btn btn-outline">
+
+                Deployment Guide
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Project Summary
+======================================================= -->
+
+<section id="overview"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Overview
+
+            </span>
+
+            <h2>
+
+                Project Summary
+
+            </h2>
+
+        </div>
+
+        <div class="project-overview">
+
+            <p>
+
+                This project demonstrates the deployment of a complete
+                Active Directory Domain Services environment using
+                Windows Server 2022 virtual machines hosted on Hyper-V.
+
+            </p>
+
+            <p>
+
+                The objective was to simulate a small enterprise
+                network with centralized authentication,
+                DNS, DHCP,
+                Group Policy,
+                file services,
+                and PowerShell automation.
+
+            </p>
+
+            <p>
+
+                Every configuration was documented,
+                validated,
+                and tested to mirror enterprise deployment
+                procedures and best practices.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Project Highlights
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="highlights-grid">
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    🖥 Platform
+
+                </h3>
+
+                <p>
+
+                    Hyper-V Virtualization
+
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    🏢 Domain
+
+                </h3>
+
+                <p>
+
+                    Windows Server 2022
+
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    👥 Users
+
+                </h3>
+
+                <p>
+
+                    Active Directory
+
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    ⚡ Automation
+
+                </h3>
+
+                <p>
+
+                    PowerShell
+
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    🌐 Services
+
+                </h3>
+
+                <p>
+
+                    DNS • DHCP • GPO
+
+                </p>
+
+            </div>
+
+            <div class="highlight-card">
+
+                <h3>
+
+                    🔒 Security
+
+                </h3>
+
+                <p>
+
+                    Least Privilege
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Technology Stack
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Technology Stack
+
+            </span>
+
+            <h2>
+
+                Technologies Used
+
+            </h2>
+
+        </div>
+
+        <div class="tech-grid">
+
+            <div class="tech-card">
+
+                <h3>
+
+                    Windows Server 2022
+
+                </h3>
+
+                <p>
+
+                    Domain Controller
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    Hyper-V
+
+                </h3>
+
+                <p>
+
+                    Virtualization Platform
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    Active Directory
+
+                </h3>
+
+                <p>
+
+                    Identity Services
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    DNS
+
+                </h3>
+
+                <p>
+
+                    Name Resolution
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    DHCP
+
+                </h3>
+
+                <p>
+
+                    Address Management
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    Group Policy
+
+                </h3>
+
+                <p>
+
+                    Centralized Configuration
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    PowerShell
+
+                </h3>
+
+                <p>
+
+                    Automation
+
+                </p>
+
+            </div>
+
+            <div class="tech-card">
+
+                <h3>
+
+                    Windows Admin Center
+
+                </h3>
+
+                <p>
+
+                    Server Management
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Architecture
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Architecture
+
+            </span>
+
+            <h2>
+
+                Lab Infrastructure
+
+            </h2>
+
+        </div>
+
+        <div class="architecture-diagram">
+
+<pre>
+
+                    Internet
+                        │
+                Home Router
+                        │
+                ─────────────────
+                        │
+                  Hyper-V Host
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+        │               │               │
+   Domain Controller   Windows 11    File Server
+     Windows Server      Client       Windows Server
+        │
+        │
+ Active Directory
+ DNS
+ DHCP
+ Group Policy
+
+</pre>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Infrastructure Specifications
+======================================================= -->
+
+<section class="section" id="infrastructure">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                Infrastructure
+            </span>
+
+            <h2>
+                Virtual Infrastructure Specifications
+            </h2>
+
+            <p>
+                The lab environment was designed to simulate a small
+                enterprise network using multiple Windows virtual
+                machines hosted on Hyper-V.
+            </p>
+
+        </div>
+
+        <div class="spec-grid">
+
+            <div class="spec-card">
+
+                <h3>Hyper-V Host</h3>
+
+                <table>
+
+                    <tr>
+                        <th>Operating System</th>
+                        <td>Windows 11 Pro</td>
+                    </tr>
+
+                    <tr>
+                        <th>Role</th>
+                        <td>Hyper-V Host</td>
+                    </tr>
+
+                    <tr>
+                        <th>Virtual Switch</th>
+                        <td>External</td>
+                    </tr>
+
+                    <tr>
+                        <th>Storage</th>
+                        <td>NVMe SSD</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="spec-card">
+
+                <h3>Domain Controller</h3>
+
+                <table>
+
+                    <tr>
+                        <th>Operating System</th>
+                        <td>Windows Server 2022</td>
+                    </tr>
+
+                    <tr>
+                        <th>vCPU</th>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <th>Memory</th>
+                        <td>4 GB</td>
+                    </tr>
+
+                    <tr>
+                        <th>Disk</th>
+                        <td>80 GB</td>
+                    </tr>
+
+                    <tr>
+                        <th>Roles</th>
+                        <td>AD DS, DNS, DHCP</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="spec-card">
+
+                <h3>Client Computer</h3>
+
+                <table>
+
+                    <tr>
+                        <th>Operating System</th>
+                        <td>Windows 11 Enterprise</td>
+                    </tr>
+
+                    <tr>
+                        <th>vCPU</th>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <th>Memory</th>
+                        <td>4 GB</td>
+                    </tr>
+
+                    <tr>
+                        <th>Disk</th>
+                        <td>64 GB</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Network Configuration
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Networking
+
+            </span>
+
+            <h2>
+
+                IP Addressing Plan
+
+            </h2>
+
+        </div>
+
+        <table class="network-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Device</th>
+
+                    <th>Hostname</th>
+
+                    <th>IP Address</th>
+
+                    <th>Role</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Domain Controller</td>
+
+                    <td>DC01</td>
+
+                    <td>192.168.10.10</td>
+
+                    <td>AD DS / DNS / DHCP</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Windows Client</td>
+
+                    <td>CLIENT01</td>
+
+                    <td>DHCP</td>
+
+                    <td>Domain Workstation</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Hyper-V Host</td>
+
+                    <td>HV01</td>
+
+                    <td>192.168.10.5</td>
+
+                    <td>Virtualization Host</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Active Directory Deployment
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Deployment
+
+            </span>
+
+            <h2>
+
+                Active Directory Configuration
+
+            </h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    1. Install Windows Server 2022
+
+                </h3>
+
+                <p>
+
+                    Deploy a new virtual machine,
+                    configure a static IP address,
+                    rename the server to DC01,
+                    and install Windows updates.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    2. Install AD DS Role
+
+                </h3>
+
+                <p>
+
+                    Install the Active Directory Domain Services
+                    role using Server Manager or PowerShell.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    3. Promote to Domain Controller
+
+                </h3>
+
+                <p>
+
+                    Create a new forest,
+                    configure Directory Services Restore Mode,
+                    and reboot the server.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    4. Verify Domain Health
+
+                </h3>
+
+                <p>
+
+                    Confirm DNS registration,
+                    replication,
+                    SYSVOL,
+                    and Active Directory functionality.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     DNS Configuration
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                DNS
+
+            </span>
+
+            <h2>
+
+                Name Resolution
+
+            </h2>
+
+        </div>
+
+        <div class="project-overview">
+
+            <ul>
+
+                <li>Configured Active Directory Integrated Zones</li>
+
+                <li>Created Forward Lookup Zone</li>
+
+                <li>Configured Reverse Lookup Zone</li>
+
+                <li>Added DNS Forwarders</li>
+
+                <li>Validated Client Name Resolution</li>
+
+                <li>Verified SRV Records</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     DHCP Configuration
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                DHCP
+
+            </span>
+
+            <h2>
+
+                Dynamic Address Allocation
+
+            </h2>
+
+        </div>
+
+        <div class="spec-grid">
+
+            <div class="spec-card">
+
+                <h3>
+
+                    DHCP Scope
+
+                </h3>
+
+                <table>
+
+                    <tr>
+
+                        <th>Scope</th>
+
+                        <td>192.168.10.100-200</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Subnet Mask</th>
+
+                        <td>255.255.255.0</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Gateway</th>
+
+                        <td>192.168.10.1</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>DNS</th>
+
+                        <td>192.168.10.10</td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+            <div class="spec-card">
+
+                <h3>
+
+                    Validation
+
+                </h3>
+
+                <ul>
+
+                    <li>✔ Authorized DHCP Server</li>
+
+                    <li>✔ Client Received Lease</li>
+
+                    <li>✔ DNS Registration</li>
+
+                    <li>✔ Internet Connectivity</li>
+
+                    <li>✔ Domain Join Successful</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Organizational Unit Design
+======================================================= -->
+
+<section class="section" id="ou-design">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Active Directory
+
+            </span>
+
+            <h2>
+
+                Organizational Unit Structure
+
+            </h2>
+
+            <p>
+
+                A logical Organizational Unit (OU) structure was created
+                to simplify administration, delegate permissions, and
+                apply Group Policy Objects (GPOs) efficiently.
+
+            </p>
+
+        </div>
+
+<pre class="directory-tree">
+
+corp.local
+│
+├── Domain Controllers
+│
+├── Servers
+│     ├── File Servers
+│     ├── Application Servers
+│     └── Test Servers
+│
+├── Workstations
+│
+├── Users
+│     ├── IT
+│     ├── HR
+│     ├── Finance
+│     └── Sales
+│
+├── Groups
+│
+└── Service Accounts
+
+</pre>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     User & Group Administration
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Identity Management
+
+            </span>
+
+            <h2>
+
+                User & Group Administration
+
+            </h2>
+
+        </div>
+
+        <div class="spec-grid">
+
+            <div class="spec-card">
+
+                <h3>
+
+                    User Accounts
+
+                </h3>
+
+                <ul>
+
+                    <li>Create standard users</li>
+
+                    <li>Create administrator accounts</li>
+
+                    <li>Reset passwords</li>
+
+                    <li>Unlock user accounts</li>
+
+                    <li>Disable inactive users</li>
+
+                    <li>Manage profile information</li>
+
+                </ul>
+
+            </div>
+
+            <div class="spec-card">
+
+                <h3>
+
+                    Security Groups
+
+                </h3>
+
+                <ul>
+
+                    <li>IT Administrators</li>
+
+                    <li>HR Department</li>
+
+                    <li>Finance Department</li>
+
+                    <li>Sales Department</li>
+
+                    <li>Remote Desktop Users</li>
+
+                    <li>File Share Access Groups</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Group Policy
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Group Policy
+
+            </span>
+
+            <h2>
+
+                Group Policy Configuration
+
+            </h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    Password Policy
+
+                </h3>
+
+                <p>
+
+                    Enforced password complexity,
+                    minimum password length,
+                    password history,
+                    and account lockout policies.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    Windows Updates
+
+                </h3>
+
+                <p>
+
+                    Configured automatic update settings
+                    and scheduled maintenance windows.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    Desktop Restrictions
+
+                </h3>
+
+                <p>
+
+                    Applied corporate desktop settings,
+                    disabled unnecessary Control Panel access,
+                    and configured login banners.
+
+                </p>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <h3>
+
+                    Drive Mapping
+
+                </h3>
+
+                <p>
+
+                    Automatically mapped departmental
+                    network drives using Group Policy Preferences.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     PowerShell Automation
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Automation
+
+            </span>
+
+            <h2>
+
+                PowerShell Administration
+
+            </h2>
+
+        </div>
+
+<p>
+
+Routine administrative tasks were automated using
+PowerShell to improve consistency and reduce manual effort.
+
+</p>
+
+<pre><code class="language-powershell">
+
+Import-Module ActiveDirectory
+
+New-ADUser `
+    -Name "John Smith" `
+    -GivenName "John" `
+    -Surname "Smith" `
+    -SamAccountName "jsmith" `
+    -UserPrincipalName "jsmith@corp.local" `
+    -Enabled $true `
+    -AccountPassword (
+        ConvertTo-SecureString
+        "P@ssw0rd!"
+        -AsPlainText
+        -Force
+    )
+
+</code></pre>
+
+<p>
+
+Additional automation included:
+
+</p>
+
+<ul>
+
+<li>Bulk user creation from CSV</li>
+
+<li>Password reset automation</li>
+
+<li>Inactive user reporting</li>
+
+<li>Service status monitoring</li>
+
+<li>Daily server health reports</li>
+
+<li>Event log collection</li>
+
+</ul>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Security Hardening
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Security
+
+            </span>
+
+            <h2>
+
+                Server Hardening
+
+            </h2>
+
+        </div>
+
+        <div class="highlights-grid">
+
+            <div class="highlight-card">
+
+                ✔ Windows Firewall configured
+
+            </div>
+
+            <div class="highlight-card">
+
+                ✔ Administrator account secured
+
+            </div>
+
+            <div class="highlight-card">
+
+                ✔ Strong password policies
+
+            </div>
+
+            <div class="highlight-card">
+
+                ✔ Least privilege administration
+
+            </div>
+
+            <div class="highlight-card">
+
+                ✔ Automatic Windows Updates
+
+            </div>
+
+            <div class="highlight-card">
+
+                ✔ Event Log monitoring
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Validation & Testing
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Validation
+
+            </span>
+
+            <h2>
+
+                Testing Results
+
+            </h2>
+
+        </div>
+
+        <table class="network-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Test</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Domain Controller Operational</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DNS Resolution</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>DHCP Lease Assignment</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Client Joined Domain</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Group Policy Applied</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>PowerShell Automation</td>
+
+                    <td>✅ Passed</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Project Gallery
+======================================================= -->
+
+<section class="section" id="gallery">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                Gallery
+            </span>
+
+            <h2>
+                Deployment Screenshots
+            </h2>
+
+            <p>
+                Screenshots captured during the deployment,
+                configuration, and validation of the Active
+                Directory lab environment.
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/ad-server-manager.jpg"
+                     alt="Server Manager Dashboard">
+                <figcaption>Server Manager Dashboard</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/ad-users-computers.jpg"
+                     alt="Active Directory Users and Computers">
+                <figcaption>Active Directory Users and Computers</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/group-policy.jpg"
+                     alt="Group Policy Management">
+                <figcaption>Group Policy Management</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/dns-manager.jpg"
+                     alt="DNS Manager">
+                <figcaption>DNS Configuration</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/dhcp-console.jpg"
+                     alt="DHCP Console">
+                <figcaption>DHCP Scope Configuration</figcaption>
+            </figure>
+
+            <figure class="gallery-card">
+                <img src="../assets/images/projects/powershell.jpg"
+                     alt="PowerShell Automation">
+                <figcaption>PowerShell Automation</figcaption>
+            </figure>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Skills Demonstrated
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Skills
+
+            </span>
+
+            <h2>
+
+                Technical Skills Demonstrated
+
+            </h2>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-pill">Windows Server 2022</div>
+            <div class="skill-pill">Active Directory</div>
+            <div class="skill-pill">DNS</div>
+            <div class="skill-pill">DHCP</div>
+            <div class="skill-pill">Group Policy</div>
+            <div class="skill-pill">PowerShell</div>
+            <div class="skill-pill">Hyper-V</div>
+            <div class="skill-pill">Windows Admin Center</div>
+            <div class="skill-pill">Identity Management</div>
+            <div class="skill-pill">Virtualization</div>
+            <div class="skill-pill">Infrastructure Documentation</div>
+            <div class="skill-pill">Troubleshooting</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Challenges & Lessons Learned
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Reflection
+
+            </span>
+
+            <h2>
+
+                Challenges & Lessons Learned
+
+            </h2>
+
+        </div>
+
+        <div class="project-overview">
+
+            <h3>Challenges</h3>
+
+            <ul>
+
+                <li>Configuring DNS correctly before promoting the Domain Controller.</li>
+
+                <li>Ensuring clients received the correct DHCP options.</li>
+
+                <li>Troubleshooting Group Policy application using gpresult.</li>
+
+                <li>Planning an Organizational Unit structure that could scale.</li>
+
+            </ul>
+
+            <h3>Lessons Learned</h3>
+
+            <ul>
+
+                <li>Active Directory depends heavily on a healthy DNS configuration.</li>
+
+                <li>PowerShell significantly reduces repetitive administrative tasks.</li>
+
+                <li>Documenting infrastructure improves troubleshooting and repeatability.</li>
+
+                <li>Testing every configuration step helps prevent cascading issues.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Future Improvements
+======================================================= -->
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Roadmap
+
+            </span>
+
+            <h2>
+
+                Future Enhancements
+
+            </h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <h3>Multi-Site Active Directory</h3>
+                <p>Configure additional sites, subnets, and replication.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Certificate Services</h3>
+                <p>Deploy Active Directory Certificate Services (AD CS).</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Microsoft Entra ID</h3>
+                <p>Implement hybrid identity synchronization.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>Monitoring</h3>
+                <p>Integrate Windows Admin Center, Performance Monitor, and PowerShell reporting.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Related Projects
+======================================================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+
+                Related Projects
+
+            </span>
+
+            <h2>
+
+                Continue Exploring
+
+            </h2>
+
+        </div>
+
+        <div class="project-grid">
+
+            <a href="hyper-v-lab.html" class="project-card">
+
+                <h3>Hyper-V Enterprise Lab</h3>
+
+                <p>
+                    Enterprise virtualization using Hyper-V and Windows Server.
+                </p>
+
+            </a>
+
+            <a href="powershell-automation.html" class="project-card">
+
+                <h3>PowerShell Automation</h3>
+
+                <p>
+                    Automating Windows administration with reusable scripts.
+                </p>
+
+            </a>
+
+            <a href="synology-nas.html" class="project-card">
+
+                <h3>Synology NAS Deployment</h3>
+
+                <p>
+                    Centralized storage, backup, and SMB file services.
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Project CTA
+======================================================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <h2>
+
+                Interested in My Windows Infrastructure Projects?
+
+            </h2>
+
+            <p>
+
+                Explore more enterprise infrastructure deployments,
+                automation projects, and homelab documentation throughout
+                my portfolio.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="../projects.html"
+                   class="btn btn-primary">
+
+                    View All Projects
+
+                </a>
+
+                <a href="../contact.html"
+                   class="btn btn-outline">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================================
+     Footer
+======================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+
+            © 2026 Your Name • Windows System Administrator Portfolio
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/project.js"></script>
+
+</body>
+</html>
